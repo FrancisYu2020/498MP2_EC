@@ -12,9 +12,7 @@ def process_json():
         # execute command and capture output
         p = subprocess.Popen(cmd, shell=True, stdout=subprocess.PIPE)
         # read output and wait for command to finish
-        out, err = p.communicate()
-        # print output
-        return out.decode()
+        return "stress test submitted"
     elif request.method == 'GET':
         return socket.gethostname()
     else:
